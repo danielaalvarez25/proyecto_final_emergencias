@@ -12,7 +12,16 @@ defmodule Sistema do
 
   @impl true
   def init(:ok) do
-    hijos = [Recursos, Necesidades, Albergues, Despacho]
+    hijos = [
+      Recursos,
+      Necesidades,
+      Albergues,
+      Despacho,
+      Usuarios,
+      Zonas,
+      Personas,
+      Mascotas
+    ]
 
     Supervisor.init(hijos, strategy: :one_for_one)
   end
